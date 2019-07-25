@@ -36,7 +36,27 @@ My groups:
 
 To use class resources, instead of Korytov’s resources:
 module load class/phz5155
-- each time you want to submit a job, do this command^
+- each time you want to submit a job, do this command
+
+Development Sessions
+When to use a dev session?
+- When a job requires multiple cores and maybe a few days to run
+- There are 6 dev nodes!
+
+module load ufrc
+srundev -h					<== help!
+srundev --time=04:00:00		<== begin a 4 hr dev session, with the default 1 processor core and 2 GB of memory
+srundev --time=60 --ntasks=1 --cpus-per-task=4 --mem=4gb		<== additional flags
+srundev -t 3-0 				<== session lasts 3 days
+srundev -t 60					<== session lasts 60 min
+- default time is 00:10:00 (10 min) and max time is 12:00:00
+These are all wrappers for:
+srun --partition=hpg2-dev --pty bash -i
+
+Getting CMSSW on HPG!!!
+1. Start a dev session
+2. source /cvmfs/cms.cern.ch/cmsset_default.sh    <== this makes cmsrel and cmsenv two new aliases for you!
+3. Now cmsrel your favorite CMSSW_X_Y_Z
 
 It is useful to use the extension: .slurm for SLURM scripts
 ------------------
@@ -120,22 +140,3 @@ module purge		<== unloads all modules
 ml intel			<== allows you to do "make" commands
 module load intel/2018 openmpi/3.1.0	<== compiling
 
-Development Sessions
-When to use a dev session?
-- When a job requires multiple cores and maybe a few days to run
-- There are 6 dev nodes!
-
-module load ufrc
-srundev -h					<== help!
-srundev --time=04:00:00		<== begin a 4 hr dev session, with the default 1 processor core and 2 GB of memory
-srundev --time=60 --ntasks=1 --cpus-per-task=4 --mem=4gb		<== additional flags
-srundev -t 3-0 				<== session lasts 3 days
-srundev -t 60					<== session lasts 60 min
-- default time is 00:10:00 (10 min) and max time is 12:00:00
-These are all wrappers for:
-srun --partition=hpg2-dev --pty bash -i
-
-Getting CMSSW on HPG!!!
-1. Start a dev session
-2. source /cvmfs/cms.cern.ch/cmsset_default.sh    <== this makes cmsrel and cmsenv two new aliases for you!
-3. Now cmsrel your favorite CMSSW_X_Y_Z
