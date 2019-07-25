@@ -58,9 +58,9 @@ Getting CMSSW on HPG!!!
 2. source /cvmfs/cms.cern.ch/cmsset_default.sh    <== this makes cmsrel and cmsenv two new aliases for you!
 3. Now cmsrel your favorite CMSSW_X_Y_Z
 
-------------------------
-- Basic SLURM script -
-------------------------
+
+Basic SLURM script:
+
 #!/bin/bash
 #SBATCH --job-name=test    	# Name for job
 #SBATCH -o job_%j.out       # 
@@ -74,10 +74,6 @@ Getting CMSSW on HPG!!!
 hostname
 module load python
 python -V
-
---------
-- END -
---------
 
 SLURM sbatch directives
 multi-letter directives are double dashes:
