@@ -39,9 +39,9 @@ module load class/phz5155
 - each time you want to submit a job, do this command^
 
 It is useful to use the extension: .slurm for SLURM scripts
-######################
-## Basic SLURM job script:
-######################
+------------------
+Basic SLURM job script:
+------------------
 #!/bin/bash
 #SBATCH --job-name=test    	# Name for job
 #SBATCH -o job_%j.out       	# 
@@ -55,7 +55,7 @@ It is useful to use the extension: .slurm for SLURM scripts
 hostname
 module load python
 python -V
-######################
+------------------
 
 SLURM sbatch directives
 multi-letter directives are double dashes:
