@@ -61,7 +61,8 @@ Getting CMSSW on HPG!!!
 
 Basic SLURM script:
 
-#!/bin/bash
+!/bin/bash
+hi
 #SBATCH --job-name=test    	# Name for job
 #SBATCH -o job_%j.out       # 
 #SBATCH --mail-type=ALL
