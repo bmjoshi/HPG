@@ -58,11 +58,7 @@ Getting CMSSW on HPG!!!
 2. source /cvmfs/cms.cern.ch/cmsset_default.sh    <== this makes cmsrel and cmsenv two new aliases for you!
 3. Now cmsrel your favorite CMSSW_X_Y_Z
 
-
-Basic SLURM script:
-
-!/bin/bash
-hi
+#!/bin/bash
 #SBATCH --job-name=test    	# Name for job
 #SBATCH -o job_%j.out       # 
 #SBATCH --mail-type=ALL
