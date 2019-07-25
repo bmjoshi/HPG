@@ -41,6 +41,7 @@ module load class/phz5155
 It is useful to use the extension: .slurm for SLURM scripts
 ######################
 ## Basic SLURM job script:
+######################
 #!/bin/bash
 #SBATCH --job-name=test    	# Name for job
 #SBATCH -o job_%j.out       	# 
