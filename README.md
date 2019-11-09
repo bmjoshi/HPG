@@ -95,3 +95,6 @@ module spider cl	<== list everything with cl in name
 module purge	<== unloads all modules
 ml intel	<== allows you to do "make" commands
 module load intel/2018 openmpi/3.1.0	<== compiling
+                                                 
+Command to make DIGI files:
+cmsDriver.py -s DIGI,L1,DIGI2RAW,HLT --datatier GEN-SIM-DIGI-RAW --conditions 100X_upgrade2018_realistic_v10 --eventcontent RAWSIM --era Run2_2018 --filein file:DsTau3Mu_13TeV_MC2018_SIM.root --fileout file:DsTau3Mu_13TeV_MC2018_DIGI.root --python_filename DsTau3Mu_13TeV_MC2018_DIGI.py -n 10 --no_exec --pileup 2018_25ns_ProjectedPileup_PoissonOOTPU --pileup_input dbs:/MinBias_TuneCP5_13TeV-pythia8/RunIISpring18GS-100X_upgrade2018_realistic_v9-v1/GEN-SIM
